@@ -1,0 +1,20 @@
+﻿tuple , sorte de mini classe
+(string chaine1, string chaine2, int chiffre, double chiffreVirgule) tuple1;
+
+Console.WriteLine($"Premier element : {tuple1.chiffre} & deuxieme elemeent : {tuple1.chiffreVirgule}");
+
+Console.WriteLine("\n" + a + "-- bonjour");
+Console.WriteLine($"Hello World! \n a : {a}");
+
+
+string salade = null;
+string recette = salade ?? "pas de salade";
+Console.WriteLine("Pour la première recette, il y aura "+recette);
+salade = "Laitue";
+recette = salade ?? "pas de salade";
+Console.WriteLine("Pour la seconde recette, il y aura "+recette); 
+
+methodes : 
+// finalize : la méthode qui est appelé lors de la descruction d'un objet
+// ~Object (); --> destructeur
+// toString : Permet de convertir un élément en string, methode qui explicite une conversion de type , sans paramètre
