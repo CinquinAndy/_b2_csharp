@@ -1,0 +1,13 @@
+C:\Users\andyq\OneDrive - Ifag Paris\Bureau\b2c1 - 2020\c#\_2020\_2020\bin\Debug\netcoreapp3.1\_2020.exe
+C:\Users\andyq\OneDrive - Ifag Paris\Bureau\b2c1 - 2020\c#\_2020\_2020\bin\Debug\netcoreapp3.1\_2020.deps.json
+C:\Users\andyq\OneDrive - Ifag Paris\Bureau\b2c1 - 2020\c#\_2020\_2020\bin\Debug\netcoreapp3.1\_2020.runtimeconfig.json
+C:\Users\andyq\OneDrive - Ifag Paris\Bureau\b2c1 - 2020\c#\_2020\_2020\bin\Debug\netcoreapp3.1\_2020.runtimeconfig.dev.json
+C:\Users\andyq\OneDrive - Ifag Paris\Bureau\b2c1 - 2020\c#\_2020\_2020\bin\Debug\netcoreapp3.1\_2020.dll
+C:\Users\andyq\OneDrive - Ifag Paris\Bureau\b2c1 - 2020\c#\_2020\_2020\bin\Debug\netcoreapp3.1\_2020.pdb
+C:\Users\andyq\OneDrive - Ifag Paris\Bureau\b2c1 - 2020\c#\_2020\_2020\obj\Debug\netcoreapp3.1\_2020.csprojAssemblyReference.cache
+C:\Users\andyq\OneDrive - Ifag Paris\Bureau\b2c1 - 2020\c#\_2020\_2020\obj\Debug\netcoreapp3.1\_2020.AssemblyInfoInputs.cache
+C:\Users\andyq\OneDrive - Ifag Paris\Bureau\b2c1 - 2020\c#\_2020\_2020\obj\Debug\netcoreapp3.1\_2020.AssemblyInfo.cs
+C:\Users\andyq\OneDrive - Ifag Paris\Bureau\b2c1 - 2020\c#\_2020\_2020\obj\Debug\netcoreapp3.1\_2020.csproj.CoreCompileInputs.cache
+C:\Users\andyq\OneDrive - Ifag Paris\Bureau\b2c1 - 2020\c#\_2020\_2020\obj\Debug\netcoreapp3.1\_2020.dll
+C:\Users\andyq\OneDrive - Ifag Paris\Bureau\b2c1 - 2020\c#\_2020\_2020\obj\Debug\netcoreapp3.1\_2020.pdb
+C:\Users\andyq\OneDrive - Ifag Paris\Bureau\b2c1 - 2020\c#\_2020\_2020\obj\Debug\netcoreapp3.1\_2020.genruntimeconfig.cache
