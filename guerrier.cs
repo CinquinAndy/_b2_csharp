@@ -4,13 +4,19 @@ using System.Text;
 
 namespace _2020
 {
-    class Guerrier:Metier
+    class Guerrier:Personnage
     {
-        int tauxRage;
-        public Guerrier(int experience,int tauxRage)
+        Byte tauxRage;
+        public Guerrier(string nomPerso, List<Arme> listeArmes, Byte tauxRage):base(nomPerso,listeArmes)
         {
-            experienceMetier = experience;
             this.tauxRage = tauxRage;
+        }
+        public override void o_attaquer() { 
+            Console.WriteLine("Classe Guerrier attaque 'o'"); 
+        }
+        public override void n_attaquer()
+        {
+            Console.WriteLine("Classe Guerrier attaque 'n'");
         }
     }
 }

@@ -13,5 +13,7 @@ namespace _2020
             this.nomArme = nomArme;
             this.identifiant = identifiant;
         }
+
+        public string NomArme { get => nomArme;}
     }
 }

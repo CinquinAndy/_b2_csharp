@@ -1,65 +1,104 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace _2020
 {
-    class Personnage
+    abstract class Personnage
     {
         private string nomPerso;
-        private Metier metierPerso;
-        // string aussi
-        // dictionnaire
-        // byte plus opti
-        private int vitessePerso;
-        private int forcePerso;
-        private int endurancePerso;
-        private int viePerso;
+        //private Metier metierPerso;
+        private Byte vitessePerso;
+        private Byte forcePerso;
+        private Byte endurancePerso;
+        private Byte viePerso =25;
         private List<Arme> listeArmes;
-        //private Arme[] armesPerso;
-        public Personnage(string nomPerso, Metier metierPerso, List<Arme> listeArmes,
-            int viePerso = 25, int vitessePerso=25, int forcePerso=25, int endurancePerso=25)
+        public Personnage(string nomPerso, List<Arme> listeArmes)
         {
-            this.NomPerso= nomPerso;
-            this.MetierPerso= metierPerso;
-            this.ViePerso = viePerso;
-            this.ListeArmes = listeArmes;
-            // possibilité 1
-            if (endurancePerso + vitessePerso + forcePerso >= 25)
+            Console.WriteLine("Création de personnage :\n");
+            var saisieValid = false;
+            string saisie;
+            do
             {
-                this.VitessePerso = 10;
-                this.EndurancePerso = 10;
-                this.ForcePerso = 5;
-            }
-            else { 
-                this.VitessePerso= vitessePerso;
-                this.EndurancePerso = endurancePerso;
-                this.ForcePerso= forcePerso;
-            }
-            // possibilité 2 -> retour erreur
-            // possibilité 3 -> gestion de la saisie, avec un prompt
-            // Console.ReadLine(); + do while pour gestion de saisie tant que saisie pas ok
-            //this.armesPerso =new Arme[this.forcePerso];
-        }
-        public string NomPerso { get => nomPerso; set => nomPerso = value; }
-        public int VitessePerso { get => vitessePerso; set => vitessePerso = value; }
-        public int ForcePerso { get => forcePerso; set { 
-                if (vitessePerso + endurancePerso + value >= 25){}
+                Console.WriteLine("Veuillez saisir les statistiques du personnages, vous avez 25 points à distribués");
+                do
+                {
+                    Console.WriteLine("Vitesse du personnage : (nombre) ");
+                    saisie = Console.ReadLine();
+                    saisieValid = Byte.TryParse(saisie,out this.vitessePerso);
+                    if (this.vitessePerso > 25)
+                    {
+                        saisieValid = false;
+                    }
+                    if (saisieValid == false)
+                    {
+                        Console.WriteLine("Erreur de saisie, veuillez recommencer !");
+                    }
+                } while (saisieValid == false);
+                saisieValid = false;
+                do
+                {
+                    Console.WriteLine("Force du personnage : (nombre) ");
+                    saisie = Console.ReadLine();
+                    saisieValid = Byte.TryParse(saisie, out this.forcePerso);
+                    if (this.forcePerso > 25)
+                    {
+                        saisieValid = false;
+                    }
+                    if (saisieValid == false)
+                    {
+                        Console.WriteLine("Erreur de saisie, veuillez recommencer !");
+                    }
+                } while (saisieValid == false);
+                saisieValid = false;
+                do
+                {
+                    Console.WriteLine("Endurance du personnage : (nombre) ");
+                    saisie = Console.ReadLine();
+                    saisieValid = Byte.TryParse(saisie, out this.endurancePerso);
+                    if (this.endurancePerso > 25)
+                    {
+                        saisieValid = false;
+                    }
+                    if (saisieValid == false)
+                    {
+                        Console.WriteLine("Erreur de saisie, veuillez recommencer !");
+                    }
+                } while (saisieValid == false);
+                saisieValid = false;
+                if (this.endurancePerso + this.forcePerso + this.vitessePerso > 25)
+                {
+                    Console.WriteLine("Vous avez donner trop de point !!");
+                }
                 else
                 {
-                    forcePerso = value;
-                    // pour accédé à mon extension, il faut que la variable soit une string
-                    forcePerso.ToString().affichageInfo();
+                    saisieValid = true;
                 }
-            } 
+
+            } while (saisieValid == false);
+            this.nomPerso = nomPerso;
+            this.listeArmes = listeArmes;
         }
-        public int EndurancePerso { get => endurancePerso; set => endurancePerso = value; }
-        public int ViePerso { get => viePerso; set => viePerso = value; }
-        internal Metier MetierPerso { get => metierPerso; set => metierPerso = value; }
+        public virtual void afficherStats()
+        {
+        Console.WriteLine($"Nom : {this.nomPerso}, " +
+            $"Vitesse : {this.vitessePerso}, " +
+            $"Force : {this.forcePerso}, " +
+            $"Endurance : {this.endurancePerso}, " +
+            $"Vie : {this.viePerso}.");
+            Console.WriteLine("Equipement :");
+            foreach (Arme armes in listeArmes)
+            {
+                Console.WriteLine("- "+armes.NomArme);
+            }
+        }
+        public abstract void o_attaquer();
+        public abstract void n_attaquer();
+        public string NomPerso { get => nomPerso; set => nomPerso = value; }
+        public Byte ViePerso { get => viePerso;}
         internal List<Arme> ListeArmes { get => listeArmes; set => listeArmes = value; }
+        
+
     }
 }
-
-// out -> sans assignation au début
-// ref -> avec assignation au début
-// --> out / ref --> pour passé par une référence, un pointeur

@@ -18,3 +18,43 @@ methodes :
 // finalize : la méthode qui est appelé lors de la descruction d'un objet
 // ~Object (); --> destructeur
 // toString : Permet de convertir un élément en string, methode qui explicite une conversion de type , sans paramètre
+
+// equals -> compare l'égalité entre deux valeurs, Compare d'abord la référence, si elle n'est pas égale, compare le type,
+si le type est égal, alors la methode test les valeurs directement.
+
+// referenceEquals -> compare l'égalité entre deux références
+
+// GetHashCode -> permet de récupéré une valeur chiffré de notre objet / int / ou n'importe quelle valeur
+L’une des méthodes les plus simples pour calculer un code de hachage pour une valeur 
+numérique qui a la même plage ou une plus petite plage que le Int32
+
+// MemberwiseClone -> fait une copie en 'shallow' , peu profonde, copie un objet dans un autre
+si l'objet est une instanciation d'une classe utilisant une autre classe
+(par exemple une classe 'forme' utilisant une autre classe 'point')
+lorsqu'on fait un MemberwiseClone, on copie l'objet complet mais également les références des 
+classes qui font partie de ce même objet, 
+si on modifie donc un des points faisant partie de la forme, alors nos deux objets subirons la modification des points
+Si on veux palier à ce problème, nous devons faire du 'deepCopy' , c'est à dire, créer à la mains des en plus du MemberwiseClone,
+des nouvelles références pour les membres objets dépendant de la classe principale
+
+// GetType -> Obtient le Type de l'instance actuelle.
+// is
+si expr est une instance du même type que type.
+si expr est une instance d’un type qui dérive de type. En d’autres termes, le résultat de expr peut être upcasté en une instance de type.
+si expr a un type au moment de la compilation qui est une classe de base de type et expr a un type au moment de l’exécution égal à type ou dérivé de type. Le type au moment de la compilation d’une variable est le type de la variable, tel qu’il est défini dans sa déclaration. Le type au moment de l’exécution d’une variable est le type de l’instance qui est assignée à cette variable.
+si expr est une instance d’un type qui implémente l’interface type.
+
+// Sealed : Lorsqu’il est appliqué à une classe, le modificateur sealed empêche les autres classes d’en hériter.
+-> le contraire de l'abstraction, aucun éléments peux hérité de cette classe
+
+// Abstract : Le modificateur abstract indique que l’élément en cours de modification a une implémentation manquante 
+ou incomplète. Le modificateur abstract peut être utilisé avec des classes, des méthodes, des propriétés, 
+des indexeurs et des événements. Dans une déclaration de classe, utilisez le modificateur abstract pour indiquer 
+qu’une classe doit uniquement servir de classe de base pour d’autres classes, et ne pas être instanciée toute seule. 
+Les membres définis comme abstraits doivent être implémentés par des classes non abstraites dérivées de la classe abstraite.
+
+// Virtual -> methode virtuelle , permet d'extendre / réecrire cette methode
+// New / Override -> new fait du masquage / override fait de la réécriture // une methode virtuelle avec une enfant 'new'
+va donner accès a l'appel de fonction qui dépend de la déclaration de notre objet
+Override va quand a elle tout réecrire
+// Abtract -> permet de déclaré une methode abstraite; qui n'éxiste pas seule.

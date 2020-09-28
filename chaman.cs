@@ -4,13 +4,20 @@ using System.Text;
 
 namespace _2020
 {
-    class Chaman:Metier
+    class Chaman: Personnage
     {
-        int maitriseDeLaNature;
-        public Chaman(int experience,int maitriseDeLaNature)
+        Byte maitriseDeLaNature;
+        public Chaman(string nomPerso, List<Arme> listeArmes, Byte maitriseDeLaNature) : base(nomPerso, listeArmes)
         {
-            experienceMetier = experience;
             this.maitriseDeLaNature = maitriseDeLaNature;
+        }
+        public override void o_attaquer()
+        {
+            Console.WriteLine("Classe Guerrier attaque 'o'");
+        }
+        public override void n_attaquer()
+        {
+            Console.WriteLine("Classe Guerrier attaque 'n'");
         }
     }
 }
